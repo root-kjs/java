@@ -1,6 +1,6 @@
-package d01_0627; // 현재 .java 파일이 위치한 폴더명
+package d01_출력함수_23_0627; // 현재 .java 파일이 위치한 폴더명
 
-public class Example3 { // class start : 모든 자바코드는 클래스안에 작성한다.
+public class Example3_출력함수_println { // class start : 모든 자바코드는 클래스안에 작성한다.
     public static void main(String[] args) {
         /*
         [ 출력함수 ]

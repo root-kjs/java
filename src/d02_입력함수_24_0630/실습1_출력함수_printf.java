@@ -1,6 +1,6 @@
-package d02_실습1_0630;
+package d02_입력함수_24_0630;
 
-public class 실습1 {
+public class 실습1_출력함수_printf {
     public static void main(String[] args) {
 //[실습1] * 제출용 250630_월
 //문제 1: 리터럴(Literal)과 기본 출력 함수

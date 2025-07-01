@@ -1,6 +1,6 @@
 package day01; // 현재 .java 파일 위치한 폴더명
 
-public class Example2 { // class start : 모든 자바코드는 클래스안에 작성한다.
+public class Exam2_자료타입 { // class start : 모든 자바코드는 클래스안에 작성한다.
 
     // (1) main함수 선언 : main + 엔터(자동완성)
     public static void main(String[] args) { // main start
