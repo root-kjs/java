@@ -1,4 +1,4 @@
-package d05_27_0703;
+package d05_별찍기_ATM_27_0703;
 
 import java.util.Scanner;
 

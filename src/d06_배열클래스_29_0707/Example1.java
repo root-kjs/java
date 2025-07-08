@@ -1,4 +1,4 @@
-package d06_0707; // 현재 .java파일의 폴더 위치
+package d06_배열클래스_29_0707; // 현재 .java파일의 폴더 위치
 
 import java.util.Arrays;
 

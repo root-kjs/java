@@ -1,4 +1,4 @@
-package d06_0707;
+package d06_배열클래스_29_0707;
 
 public class Television {
     //[문제 7] Television 클래스를 만드세요. channel(정수)과 volume(정수) 멤버 변수를 가집니다.

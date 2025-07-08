@@ -1,7 +1,6 @@
-package d06_0707;
+package d06_배열클래스_29_0707;
 
 import java.util.Arrays;
-import java.util.Scanner;
 
 public class 실습6_배열 {
     public static void main(String[] args) {

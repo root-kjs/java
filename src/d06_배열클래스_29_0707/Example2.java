@@ -1,4 +1,4 @@
-package d06_0707;
+package d06_배열클래스_29_0707;
 
 public class Example2 {
     public static void main(String[] args) {
