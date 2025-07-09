@@ -63,17 +63,26 @@ public class 실습8_메소드 {
         String star = visualizer.getStars(8); //  반환값이 있는 메소드를 호출했으면 그것을 담을 변수를 생성하여 출력해줘야 한다. `
         System.out.println( star );
 
+//[문제 8] ParkingLot 클래스를 만드세요.
+//1. 주차 시간(분)을 매개변수로 받아, 요금 규정에 따라 계산된 최종 주차 요금을 반환하는 calculateFee 메소드를 정의하세요.
+//2. 요금 규정:
+//기본 요금: 최초 30분까지 1,000원
+//추가 요금: 30분 초과 시, 매 10분마다 500원씩 추가
+//일일 최대 요금: 20,000원
+//3. main 함수에서 calculateFee 메소드에 65, 140을 각각 인자로 전달하여 반환된 요금을 출력하세요.
+        // 1. 클래스 객체를 생성하자
+        ParkingLot parking = new ParkingLot( );
+
+        // 2. 요금 계산을 위한 메소드를 호출하여 변수에 담자
+        int result1 = parking.calculateFee( 65 );
+        int result3 = parking.calculateFee( 140 );
+
+        System.out.println( "주차요금(65분) : " + result1 + "원 / 주차요금(140분) : "  + result3 );
+
+
+
 
     } // main end
 }// class end
-/*
 
 
-[문제 8] ParkingLot 클래스를 만드세요.
-1. 주차 시간(분)을 매개변수로 받아, 요금 규정에 따라 계산된 최종 주차 요금을 반환하는 calculateFee 메소드를 정의하세요.
-2. 요금 규정:
-기본 요금: 최초 30분까지 1,000원
-추가 요금: 30분 초과 시, 매 10분마다 500원씩 추가
-일일 최대 요금: 20,000원
-3. main 함수에서 calculateFee 메소드에 65, 140을 각각 인자로 전달하여 반환된 요금을 출력하세요.
-* */
