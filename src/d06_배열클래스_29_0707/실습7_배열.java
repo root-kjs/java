@@ -1,6 +1,6 @@
 package d06_배열클래스_29_0707;
 
-public class 실습7 {
+public class 실습7_배열 {
     public static void main(String[] args) {
         //JAVA] 실습7 : 클래스와 객체의멤버변수
         //[ 문제 ] 아래 클래스와 멤버변수 관련 문제

@@ -59,20 +59,14 @@ public class 실습8_메소드 {
 //[문제 7] Visualizer 클래스를 만드세요.
 //1. 정수 하나를 매개변수로 받아, 그 숫자만큼 "★" 문자를 반복하여 하나의 문자열로 만들어 반환하는 getStars 메소드를 정의하세요.
 //2. main 함수에서 getStars(5)를 호출하여 반환된 문자열 "★★★★★"를 출력하세요.
-//        Visualizer visualizer = new Visualizer();
-//        visualizer.getStars(5);
+        Visualizer visualizer = new Visualizer();
+        String star = visualizer.getStars(8); //  반환값이 있는 메소드를 호출했으면 그것을 담을 변수를 생성하여 출력해줘야 한다. `
+        System.out.println( star );
 
 
     } // main end
 }// class end
 /*
-
-
-
-
-
-
-
 
 
 [문제 8] ParkingLot 클래스를 만드세요.
