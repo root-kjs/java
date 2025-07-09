@@ -1,4 +1,4 @@
-package d08_생성자_21_0709;
+package d08_생성자_31_0709;
 
 public class Book {
     // 1. 멤버 변수 정의
