@@ -1,4 +1,4 @@
-package 종합.예제2_게시판_배열활용;
+package 종합.예제2_게시판_배열;
 
 public class BoardService2 {
 } // class end

@@ -1,6 +1,4 @@
-package 종합.심화과제1_Bank;
-
-import 종합.예제4_게시판4.BoardController;
+package 종합.심화과제1_계좌입출금;
 
 import java.util.Scanner;
 

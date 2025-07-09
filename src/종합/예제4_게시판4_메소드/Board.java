@@ -1,4 +1,4 @@
-package 종합.예제4_게시판4;
+package 종합.예제4_게시판4_메소드;
 // Model (M)
 public class Board {
     

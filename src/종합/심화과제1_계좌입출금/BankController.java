@@ -1,4 +1,4 @@
-package 종합.심화과제1_Bank;
+package 종합.심화과제1_계좌입출금;
 
 public class BankController {
 
