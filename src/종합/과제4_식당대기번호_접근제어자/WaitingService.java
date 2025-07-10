@@ -52,31 +52,16 @@ public class WaitingService {
                 for( int i = 0; i < waitings.length; i++ ) {
 
                     if( waitings[i] != null ) {
-                        System.out.println("============= 대기 현황 =============");
+                        System.out.println("--------- 대기 현황 ---------");
                         System.out.printf("연락처 : %s - 인원 : %d \n",waitings[i].getPhone() ,waitings[i].getCount() );
-                        System.out.println("------------------------------------");
-                    }
 
-//                    if( waitings[i] != null ) {
-//                        System.out.println("============= 대기 현황 =============");
-//                        System.out.printf("연락처 : %s / 인원 : %d \n",waiting.getPhone() ,waiting.getCount() );
-//                    }
+                    }
 
                 }
 
-
             } // if end
 
-
         } // 무한루프 안녕...잘가...고생했어...
-        
-//=========== 맛집 대기 시스템 ===========
-//  1.대기 등록 | 2.대기 현황
-//========================================
-//선택 > 1
-//전화번호 : 010-1234-5678
-//인원수 : 2
-//[안내] 대기 등록이 완료되었습니다.
-        
+
     }// main end
 } //class end
