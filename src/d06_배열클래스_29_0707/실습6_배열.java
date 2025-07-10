@@ -152,20 +152,17 @@ public class 실습6_배열 {
 //글래디에이터2  ★★★★★★★☆☆☆
 //청설          ★★★★★★☆☆☆☆
 
-    String[] movieNames = {"히든페이스", "위키드", "글래디에이터2", "청설"};
-    int[] movieRatings = {8, 4, 7, 6};
+        String[] movieNames = {"히든페이스", "위키드", "글래디에이터2", "청설"};
+        int[] movieRatings = {8, 4, 7, 6};
 
-    //  각 배열을 돌며 영화명과 평점을 출력한다.
-    for( int i = 0; i <= movieNames.length - 1; i++ ){
-        System.out.printf( "%-10s%d\n",movieNames[i] );
+        //  각 배열을 돌며 영화명과 평점을 출력한다.
+        for( int i = 0; i < movieNames.length; i++ ){
 
-
-    }
-
+            // System.out.printf( "%-10s%d\n", movieNames[i], movieRatings[i] );
+            System.out.println( movieNames[i]);
 
 
-
-
+        } // for end
 
     } //main end
 } // class end
