@@ -196,35 +196,25 @@ public class 실습5_반복문ATM_for문 {
             System.out.print( "선택> " );
             int select = scan.nextInt();
             if( select == 1 ){
-                System.out.println( "입금액: " );
+                System.out.print( "입금액: " );
                 int money = scan.nextInt();
                 balance += money;
             } else if( select == 2 ){
-                System.out.println( "츨금액: " );
+                System.out.print( "츨금액: " );
                 int money = scan.nextInt();
                 if( money > balance ){
-                    System.out.println(" 잔고가 부족합니다.");
+                    System.out.print(" 잔고가 부족합니다.");
                 }else{
                     balance -= money;
                 }
             } else if( select == 3 ){
-
+                System.out.println( balance );
             } else if( select == 4 ){
-
+                System.out.println( "프로그램을 종료합니다." );
+                break;
             }
 
-
-
-        }
-
-
-        // 2. 출력화면 구현
-
-        // 3. 조건식 파악
-
-        // 4. 각 기능 함수 구현
-
-
+        }  // 무한루프 end
 
 
     } // main end
