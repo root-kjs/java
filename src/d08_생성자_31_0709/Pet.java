@@ -5,7 +5,10 @@ public class Pet {
     String name;
     String species;
     int age;
-    
+
+    public static final int 상수4 = 400;
+
+
     // 2. 매개변수 생성자 정의
     Pet( String name , String species , int age ){
         this.name = name;

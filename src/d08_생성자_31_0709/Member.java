@@ -7,8 +7,8 @@ public class Member {
 
     // 2. 생성자(기본)
     Member(){
-        this.id = "guest";
-        this.isLogin = false;
+        id = "guest";
+        isLogin = false;
     }
 
 } // class end

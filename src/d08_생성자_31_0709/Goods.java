@@ -7,8 +7,8 @@ public class Goods {
 
     // 2-1. 기본 생성자
     Goods(){
-        this.name = "미정";
-        this.price = 0;
+        name = "미정"; // 기본 생성자는 매개변수가 없기 때문에 this 적지 않아도 된다.
+        price = 0;
     }
 
     // 2-2. 매개변수가 있는 생성자: name과 price를 매개변수로 받아 초기화
@@ -21,3 +21,4 @@ public class Goods {
 
 
 } // class end
+

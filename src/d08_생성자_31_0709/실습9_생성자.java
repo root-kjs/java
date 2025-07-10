@@ -6,6 +6,10 @@ import java.util.Scanner;
 //[ 문제 ] 아래 클래스와 생성자 관련 핵심 문제를 해결하시오.
 //[ 제출방법 ] 코드가 작성된 파일이 위치한 깃허브 상세 주소를 제출하시오.
 public class 실습9_생성자 {
+
+    public static final int 상수3 = 300;
+
+
     public static void main(String[] args) {
 
 //[문제 1] Book 클래스를 만드세요. (title, author, price 멤버 변수) *멤버변수의 타입은 적절하게 선택하시오.
