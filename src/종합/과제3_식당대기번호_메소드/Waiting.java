@@ -4,4 +4,6 @@ package 종합.과제3_식당대기번호_메소드;
 public class Waiting {
     String phone;
     int count;
+
+
 } // class end

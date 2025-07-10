@@ -1,7 +1,45 @@
-package 종합.과제4;
+package 종합.과제4_식당대기번호_접근제어자;
+// Model
+public class Waiting {
+    // 1. 멤버변수
+        private String phone;//전화번호
+        private int count;   // 인원수
 
-public class Wating {
+    // 2. 생성자(기본/전체 매개변수)
+    public Waiting() {
+    }
+
+    public Waiting(String phone, int count) {
+        this.phone = phone;
+        this.count = count;
+    }
+
+    // 3. 메소드(setter/getter/toString()) : 멤버변수 보안을 지키면서 해당 값 가져올 setter/getter 메소드 정의
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
+    public void setCount(int count) {
+        this.count = count;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public int getCount() {
+        return count;
+    }
+
+    @Override
+    public String toString() {
+        return "Waiting{" +
+                "phone='" + phone + '\'' +
+                ", count=" + count +
+                '}';
+    }
 } //class end
+
 //[JAVA] 종합과제4 : 식당 대기번호 프로그램 ( 생성자 , 접근제한자 , static , final)
 //[ 목표 ] 종합과제3의 로직에 캡슐화(접근 제한자, Getter/Setter), 생성자, 그리고 static 키워드를 모두 적용하여, 데이터가 보호되는 견고한 프로그램을 구현합니다.
 //[ 요구사항 ]
