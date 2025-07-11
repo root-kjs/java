@@ -7,8 +7,8 @@ public class GameConfig {
     public static final String GAME_TITLE = "My RPG";
 
     // 2. 생성자
-    public GameConfig() {
-    }
+//    public GameConfig() {  // 멤버 변수가 없는 경우에는 적지않아도 될 듯
+//    }
 
     // 3. 메소드
 
