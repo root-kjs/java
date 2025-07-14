@@ -1,14 +1,12 @@
-package 종합.과제5_식당대기_MVC_싱글톤.model.dto;
-// 역할 : 데이터모델/객체
-
+package 종합.과제6_식당대기_ArrayList.model.dto;
+// Model : 데이터 모델/객체
 public class WaitingDto {
-    
-    // 1. 멤버 변수 : private
+
+    // 1. 멤버변수 : private 비공개 설정
     private String phone;
     private int count;
-    
-    // 2, 생성자(기본/전체) :public
 
+    // 2. 생성자(기본/전체)
     public WaitingDto() {
     }
 
@@ -17,7 +15,8 @@ public class WaitingDto {
         this.count = count;
     }
 
-    // 3, 메소드(getter/setter/toString) : public
+    // 3. 메소드(getter/setter/toString)
+
     public String getPhone() {
         return phone;
     }
