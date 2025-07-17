@@ -4,13 +4,15 @@
 
 -- [문제 1] 아래 조건에 맞는 members 테이블을 생성하는 SQL을 작성하세요.
 -- 테이블명: members
--- 컬럼 정보:
+-- 컬럼 정보: 미리 설계할 것!
 -- member_id (회원 아이디): 문자열(20), 기본 키(Primary Key), NULL 허용 안함
 -- member_name (회원 이름): 문자열(50), NULL 허용 안함
 -- email (이메일): 문자열(100), 고유 키(Unique), NULL 허용 안함
 -- join_date (가입일): 날짜/시간, **기본값(Default)**은 현재 날짜/시간
 -- points (포인트): 정수, **기본값(Default)**은 0
 drop table if exists members;
+-- 파랑색은 키워드/문법, 검정색은 직접 정한 이름
+-- 마지막 속성은 ,  생략!
 create table members(
 	member_id varchar(20) , 
     constraint primary key( member_id ), 
@@ -27,11 +29,13 @@ select * from members;
 -- points: 1000
 insert into  members (member_id , member_name , email , points ) 
 values ( 'user01' , '김철수' , 'chulsoo@example.com' , 1000 );
+
 -- [문제 3]members 테이블에서 모든 회원의 member_id와 email을 조회하는 SQL을 작성하세요.
 select member_id , email from members; 
 
 -- [문제 4]members 테이블에서 member_id가 'user01'인 회원의 points를 1500으로 업데이트하는 SQL을 작성하세요.
 update members set points = 1500 where member_id = 'user01';
+update members set points =  1500 where member_id = 'user02';
 
 -- [문제 5]members 테이블에서 member_id가 'user01'인 회원을 삭제하는 SQL을 작성하세요.
 delete from members where member_id = 'user01';
