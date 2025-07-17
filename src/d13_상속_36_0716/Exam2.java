@@ -27,7 +27,7 @@ class E extends C { // E는 C로부터 상속받는다.                   // 부
 }
 
 
-public class Example2 {
+public class Exam2 {
     public static void main(String[] args) {
 
         // (1) A클래스로 객체 생성시 총 객체수 : 2개
