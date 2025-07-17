@@ -116,8 +116,8 @@ select * from member order by maddr desc , mdebut asc; -- 1차 주소 내림차�
 
 # [6] limit 레코드수 , 조회결과 제한 *페이징 처리
 select * from member limit 4;    -- 조회결과에서 상위 2개만 조회 제한
-select * from member limit 0, 4; -- 조회결과에서 상위ㅜ 2개만 조회
-select * from member limit 1, 2; -- 조회결과에서 상위ㅜ 2개만 조회
+select * from member limit 0, 4; -- 조회결과에서 시작 인덱스, 갯수
+select * from member limit 1, 2; -- 조회결과에서 시작 인덱스, 갯수
 select * from member order by mheight desc limit 3; -- 등수 뽑을 때도 많이 사용
 
 
