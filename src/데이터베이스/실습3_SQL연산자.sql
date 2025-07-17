@@ -86,6 +86,7 @@ select title, author from books where author like '김__';
 select * from books order by price desc;
 -- [문제 9] books 테이블의 모든 도서 정보를 출판일(pub_date)이 오래된 순(오름차순)으로 정렬하되, 출판일이 같다면 제목(title)의 가나다순(오름차순)으로 정렬하세요.
 select * from books order by pub_date, title;
+-- select * from books order by pub_date asc, title asc;
 -- [문제 10] books 테이블에서 가격이 가장 저렴한 도서 3개의 title과 price를 조회하세요.
 select * from books order by price limit 3;
 -- [문제 11] books 테이블에서 가격(price)이 14000원에서 18000원 사이인 도서의 title과 price를 조회하세요. (BETWEEN 연산자 사용)
