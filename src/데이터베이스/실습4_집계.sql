@@ -144,15 +144,46 @@ select sum(stock) from books where genre = '소설';
 select genre, sum(stock) 총재고수량 from books group by genre having genre = '소설' ;
 
 -- [문제 13] orders 테이블에서 주문을 한 고객이 총 몇 명인지 조회하세요. (DISTINCT 사용)
-select * from orders;
+select * from orders order by customer;
 select distinct customer 주문고객 from orders;
-select distinct customer 주문고객 from orders;
-
+select distinct customer, count(*) 주문횟수 from orders group by customer; -- 고객별 주문횟수
+select count(distinct customer) 총주문고객 from orders;
 
 -- [문제 14] orders 테이블에서 고객별로 첫 주문일과 마지막 주문일을 조회하세요.
+select * from orders order by customer;
+select * from orders order by order_date limit 1; -- 동시는 안됨
+select customer, min(order_date) 첫주문일, max(order_date) 마지막주문일 
+	from orders 
+	group by customer;
+
 -- [문제 15] orders 테이블에서 도서별 평균 주문 수량을 조회하세요.
+select * from orders order by book_id;
+select book_id, avg(order_qty) 평균주문수량 from orders group by book_id;
+
 -- [문제 16] books 테이블에서 장르별 평균 가격이 18000원을 초과하는 장르와 그 평균 가격을 조회하세요.
+select * from books; 
+select genre, avg(price) 평균가격 from books group by genre;
+select genre, avg(price) 평균가격 from books group by genre having 평균가격 > 18000;
+
 -- [문제 17] orders 테이블에서 2023년 1분기(1월~3월)에 발생한 총 주문 수량을 조회하세요. (BETWEEN 사용)
+select * from orders;
+select * from orders where order_date between '2023-01-01' and '2023-03-31'; -- 날짜는 문자열처리 해줘야 함!!!
+select sum(order_qty) 총주문수량 from orders where order_date between '2023-01-01' and '2023-03-31'; -- 날짜는 문자열처리 해줘야 함!!!
+
 -- [문제 18] orders 테이블에서 가장 다양한 종류의 책을 주문한 고객의 이름과 그 종류의 수를 조회하세요.
+select * from orders order by customer;
+select customer, count(book_id) 다양한종류의책 from orders group by customer order by 다양한종류의책 desc;
+select customer, count(distinct book_id) 다양한종류의책 -- 중복제거 해야함.
+from orders 
+group by customer 
+order by 다양한종류의책 desc;
+
 -- [문제 19] books 테이블에서 각 장르별로 가장 저렴한 도서의 가격을 조회하세요.
+select * from books order by genre, price;
+select genre, min(price) from books group by genre order by min(price);
+
 -- [문제 20] orders 테이블에서 주문을 단 한 번만 한 고객을 조회하세요. (조회결과: 0개 레코드)
+select * from orders order by customer;
+select customer, count(customer) 주문수량 from orders group by customer;
+select customer, count(customer) 주문수량 from orders group by customer having 주문수량 = 1;
+
