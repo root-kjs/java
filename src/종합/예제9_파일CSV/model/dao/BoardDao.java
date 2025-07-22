@@ -1,6 +1,7 @@
 package 종합.예제9_파일CSV.model.dao;
 import au.com.bytecode.opencsv.CSVReader;
 import au.com.bytecode.opencsv.CSVWriter;
+import d09_접근제한자_32_0710.pk2.C;
 import 종합.예제9_파일CSV.model.dto.BoardDto;
 
 import java.io.File;
@@ -67,7 +68,7 @@ public class BoardDao {
     // 3-4. CSV 입력함수(호출/읽기) ------------------------------
     public void loadCSV(){
         try {
-            FileReader fileReader = new FileReader( path );
+            FileReader fileReader = new FileReader( path, Charset.forName("EUC-KR"));
             CSVReader csvReader = new CSVReader(fileReader);
             List<String[]> inData = csvReader.readAll(); // .readAll() 함수로 바이트가 아닌 String으로 바로 읽어온다
             for (String[] row : inData) {
@@ -92,7 +93,7 @@ public class BoardDao {
     public void saveCSV(){
         try {
             // 1. FileWriter(쓰기모드) 객체 생성
-            FileWriter fileWriter = new FileWriter( path );
+            FileWriter fileWriter = new FileWriter( path, Charset.forName("EUC-KR") );
             CSVWriter csvWriter = new CSVWriter( fileWriter );
             //  List 인터페이스 , ArrayList 구현체
             List<String[]> outData = new ArrayList<>();
