@@ -4,13 +4,19 @@ package d15_인터페이스_38_0718;
 //[ 제출방법 ] 코드가 작성된 파일이 위치한 깃허브 상세 주소를 제출하시오.
 
 public class 실습13_인터페이스 {
-}
-
+    public static void main(String[] args) {
 //[문제 1] 기본 인터페이스와 구현
 //1. "소리를 냅니다."라는 추상 메소드 makeSound()를 가진 Soundable 인터페이스를 정의하세요.
 //2. Soundable 인터페이스를 구현(implements)하는 Cat 클래스와 Dog 클래스를 만드세요.
 //3. 각 클래스에서 makeSound() 메소드를 오버라이딩하여, 각각 "야옹", "멍멍"을 출력하도록 구현하세요.
 //4. main 함수에서 Cat 객체와 Dog 객체를 생성하고, 각 객체의 makeSound() 메소드를 호출하여 결과를 확인하세요.
+
+
+
+    }// main end
+}// class end
+
+
 //
 //[문제 2] 인터페이스 상수
 //1. RemoteControl 인터페이스를 만드세요.

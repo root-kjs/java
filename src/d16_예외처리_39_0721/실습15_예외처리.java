@@ -67,7 +67,8 @@ public class 실습15_예외처리 {
     }
 
 
-//[문제 4] 방문 로그 누적 기록하기
+//[문제 4] 방문 로그 누적 기록하기_250722(화)선생님 내용 확인 후 수정_문제가 요구한 것을 상세히 확인 할 것! --> 틀림
+        // 기존 파일 읽은 다음에 기록--> 그래야 누적이 됨
 //1. FileOutputStream을 사용하여 src/visit_log.txt 파일을 여세요.
 //2. Scanner로 방문자 이름을 입력받아, "OOO님이 방문했습니다.\n" 형식의 문자열을 visit_log.txt 파일의 기존 내용 뒤에 추가하세요.
 //3. 프로그램을 여러 번 실행하여 방문 기록이 계속 누적되는지 확인하세요.
@@ -77,15 +78,22 @@ public class 실습15_예외처리 {
             System.out.print("방문자 이름 입력 : ");
             String str = scan.next();
 
+
+            String strLog = str + "님이 방문했습니다.\n";
+
             // 입력받은 String을 파일에 저장할 수 있는 바이트로 변환
             // 입력받은 문자열을 바이트 변환 , 왜?  FileOutputStream은 바이트 만 쓰기/읽기 가능하다.
-            byte[] outBytes = str.getBytes();
 
-            String path ="src/d16_예외처리_39_0721/visit_log.txt";
-            FileOutputStream fout = new FileOutputStream( path );
-            //FileOutputStream 객체를 바이트로 변환한 outBytes을 .write() 파일로 내보낸다.,
-            fout.write( outBytes );
+            String path = "src/d16_예외처리_39_0721/visit_log.txt";
+            File file = new File(path);
+            byte[] outBytes = strLog.getBytes();
+            if( file.exists() ) {
 
+                // 방안 2. 파일을 내보낼때 계속 붙여쓰기 가능
+                FileOutputStream fout = new FileOutputStream(path , true );
+                //FileOutputStream 객체를 바이트로 변환한 outBytes을 .write() 파일로 내보낸다.,
+                fout.write(outBytes);
+            }// if end
         }catch ( Exception e ){
             System.out.println("예외발생" + e );
         }
@@ -114,16 +122,18 @@ public class 실습15_예외처리 {
             String path = "src/d16_예외처리_39_0721/contacts.csv";
             File file = new File( path );  // 파일 정보 객체 선언
 
-            // FileOutputStream 객체 생성
-            FileOutputStream fout = new FileOutputStream( path );
 
-            // 스트링을 파일 변환할 수 있는 바이트 배열 객체 변환, 파일 용량만큼 배열 int 강제 형변환,
-            // 아하 아래 소스는 그냥 문자열을 바이트로 변환한거고...스트링을 바이트로 변환한게 없었댜리... 내용이 안나온 이유 : 입력받은 문자열을 .getBytes() 변환
-           // byte[] outByte = new byte[ (int)profile.length() ];
-           // fout.write( outByte );
-            fout.write(  profile.getBytes() );
+                // FileOutputStream 객체 생성
+                FileOutputStream fout = new FileOutputStream( path );
 
-            //System.out.println( file.exists() ); //  이건 파일 정보 객체이지 파일이 생성된것은 아니니 false
+                // 스트링을 파일 변환할 수 있는 바이트 배열 객체 변환, 파일 용량만큼 배열 int 강제 형변환,
+                // 아하 아래 소스는 그냥 문자열을 바이트로 변환한거고...스트링을 바이트로 변환한게 없었댜리... 내용이 안나온 이유 : 입력받은 문자열을 .getBytes() 변환
+               // byte[] outByte = new byte[ (int)profile.length() ];
+               // fout.write( outByte );
+                fout.write(  profile.getBytes() );
+
+                //System.out.println( file.exists() ); //  이건 파일 정보 객체이지 파일이 생성된것은 아니니 false
+
         }catch ( Exception e ){
             System.out.println("예외발생" + e );
         }
@@ -193,8 +203,6 @@ public class 실습15_예외처리 {
 //4. for문을 사용하여 배열의 각 줄(각 동의 인구 정보)을 순회하며, '행정기관'과 '총인구수'만 추출하여 "동별: [ 동별 ], 총 인구: [ 인구수(계)   ]명" 형식으로 출력하세요.
 
         try {
-
-
             String path = "src/d16_예외처리_39_0721/bupyeong_population.csv";
             File file = new File(path );
             if( file.exists() ) {// 파일이 있다면 코드 실행..
@@ -219,20 +227,11 @@ public class 실습15_예외처리 {
                     String[] colm = row.split(","); // 행데이터 배열 만들기
                     // 자 이제 출력 고고
                     System.out.printf( "동별: %s / 총인구수: %s 명\n ", colm[0], colm[1] );
-                    
-                    
                 }
-
-
             }
-            
-            
-            
         }catch ( Exception e ){
             System.out.println("예외발생" + e );
         }
-
-
 
 
     }// main end

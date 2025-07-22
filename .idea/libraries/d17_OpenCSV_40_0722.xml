@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="d17_OpenCSV_40_0722">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/src/d17_OpenCSV_40_0722" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$/src" />
+    </SOURCES>
+    <jarDirectory url="file://$PROJECT_DIR$/src/d17_OpenCSV_40_0722" recursive="false" />
+  </library>
+</component>
