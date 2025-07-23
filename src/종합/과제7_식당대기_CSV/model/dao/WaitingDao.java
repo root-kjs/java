@@ -11,7 +11,7 @@ import java.util.List;
 
 public class WaitingDao {
     //0. 싱글톤 생성
-    private WaitingDao(){}
+    private WaitingDao(){  readCSV();}
     private static final WaitingDao instance = new WaitingDao();
     public static WaitingDao getInstance(){ return instance; }
 
@@ -43,7 +43,7 @@ public class WaitingDao {
         // 파일 정보 객체 생성
         File file = new File( path );
         if( file.exists() ){
-            
+            writeCSV();
         }else { // csv 파일이 없으면 파일 생성
             try {
                 file.createNewFile();
