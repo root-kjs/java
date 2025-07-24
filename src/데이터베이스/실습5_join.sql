@@ -87,6 +87,7 @@ select 제품명, 카테고리명, 재고수량 from pcategory pc
 select * from pcategory;-- 카테고리번호_pk
 select * from product; -- 카테고리번호_fk
 select * from stock; -- 제품번호_fk
+select * from pcategory pc left outer join product p on pc.카테고리번호_pk = p.카테고리번호_fk; 
 select 카테고리명, 제품명 from pcategory pc left outer join product p on pc.카테고리번호_pk = p.카테고리번호_fk; 
 
 -- [문제 7] 재고가 한 번도 등록되지 않은 제품의 제품명을 조회하세요. (조회결과: 1개 레코드)
@@ -103,9 +104,11 @@ select 카테고리명, sum( 재고수량 ) from pcategory pc
 select 제품명, sum(재고수량) top from pcategory pc 
 	join product p on pc.카테고리번호_pk = p.카테고리번호_fk
     left join stock s on p.제품번호_pk = s.제품번호_fk
-    group by 제품명 order by top desc;  -- 개인적으로 재고수량이 없는(null) 도 나오는게... 물론 다양한 상황이 있겠지만...해당 상품 비노출이거나..
-    
-select 제품명, sum(재고수량) top from pcategory pc 
+    group by 제품명 order by top desc;  -- 7개 : 개인적으로 재고수량이 없는(null) 도 나오는게... 물론 다양한 상황이 있겠지만...해당 상품 비노출이거나..
+
+-- 테이블 간의 연관관계를 파악 할 
+-- 테이블 간의 공통점/교집합 속성명 여부를 먼저 확인할 것! 만약 2개로는 안되는 경우 다른 연관된 테이블과도 확인하여 연결(join)할 것!
+select 제품명, sum(재고수량) top from pcategory pc -- 두 테이블간의 필드명이 똑같은 경우에는 테이블 경로 표시..  --> p.속성명 pc. 속성명
 	join product p on pc.카테고리번호_pk = p.카테고리번호_fk
     join stock s on p.제품번호_pk = s.제품번호_fk
-    group by 제품명 order by top desc; --  
+    group by 제품명 order by top desc; -- 6개  
