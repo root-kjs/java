@@ -1,4 +1,4 @@
-package 종합.과제8_식당대기_JBDC.model.dto;
+package 종합.과제8_식당대기_JDBC.model.dto;
 
 public class WaitingDto {
     // 1. 멤버 변수

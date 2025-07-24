@@ -1,7 +1,7 @@
-package 종합.과제8_식당대기_JBDC.view;
+package 종합.과제8_식당대기_JDBC.view;
 
-import 종합.과제8_식당대기_JBDC.controller.WaitingController;
-import 종합.과제8_식당대기_JBDC.model.dto.WaitingDto;
+import 종합.과제8_식당대기_JDBC.controller.WaitingController;
+import 종합.과제8_식당대기_JDBC.model.dto.WaitingDto;
 
 import java.util.ArrayList;
 import java.util.InputMismatchException;

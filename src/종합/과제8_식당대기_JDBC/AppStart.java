@@ -1,8 +1,6 @@
-package 종합.과제8_식당대기_JBDC;
+package 종합.과제8_식당대기_JDBC;
 
-import 종합.과제8_식당대기_JBDC.controller.WaitingController;
-import 종합.과제8_식당대기_JBDC.model.dao.WaitingDao;
-import 종합.과제8_식당대기_JBDC.view.WaitingView;
+import 종합.과제8_식당대기_JDBC.view.WaitingView;
 
 public class AppStart {
     public static void main(String[] args) {

@@ -1,7 +1,7 @@
-package 종합.과제8_식당대기_JBDC.controller;
+package 종합.과제8_식당대기_JDBC.controller;
 
-import 종합.과제8_식당대기_JBDC.model.dao.WaitingDao;
-import 종합.과제8_식당대기_JBDC.model.dto.WaitingDto;
+import 종합.과제8_식당대기_JDBC.model.dao.WaitingDao;
+import 종합.과제8_식당대기_JDBC.model.dto.WaitingDto;
 import java.util.ArrayList;
 
 public class WaitingController {

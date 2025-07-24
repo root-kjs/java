@@ -1,6 +1,6 @@
-package 종합.과제8_식당대기_JBDC.model.dao;
+package 종합.과제8_식당대기_JDBC.model.dao;
 
-import 종합.과제8_식당대기_JBDC.model.dto.WaitingDto;
+import 종합.과제8_식당대기_JDBC.model.dto.WaitingDto;
 
 import java.sql.*;
 import java.util.ArrayList;
