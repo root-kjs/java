@@ -17,7 +17,6 @@ public class WaitingDao {
 
     //DB ArrayList 생성
     ArrayList<WaitingDto> waitingDB = new ArrayList<>();
-    
     // 3. 메소드 
     // 3-1. 등록 함수
     public boolean addBoard( String phone, int count ){

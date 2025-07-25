@@ -5,12 +5,12 @@ import 종합.과제8_식당대기_JDBC.model.dto.WaitingDto;
 import java.util.ArrayList;
 
 public class WaitingController {
-    // 0. 싱글톤 생성
+    // * 싱글톤 생성
     private WaitingController(){}
     private static final WaitingController instance = new WaitingController();
     public static WaitingController getInstance(){ return instance; }
 
-    // 0. 싱글톤 호출( Dao )
+    // * 싱글톤 호출( Dao )
     private WaitingDao wd = WaitingDao.getInstance();
 
     // ---------------------------- WaitingController 단위 기능 ---------------------------- //
@@ -40,7 +40,7 @@ public class WaitingController {
 
     // (4) 특정 대기수정
     public boolean waitingEdit( int wno, int wcount ){
-        // dto 객체 만들어 view로 부터 매개변수 대입생성 후 controller에게 전달하고, 해당 반환값을 다시 view에게 전달
+        // dto 객체 만들어 view로 부터 매개변수 대입생성 후 Dao에게 전달하고, 해당 반환값을 다시 controller에게 전달
         WaitingDto waitingDto = new WaitingDto( wno,"-", wcount);
         boolean result = wd.waitingEdit( waitingDto );
         return result;

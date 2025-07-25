@@ -6,18 +6,18 @@ import java.sql.*;
 import java.util.ArrayList;
 
 public class WaitingDao {
-    // 0. 싱글톤 생성
+    // * 싱글톤 생성
     private WaitingDao(){ connectDB(); }
     private static final WaitingDao instance = new WaitingDao();
     public static WaitingDao getInstance(){ return instance; }
     
-    // 1. DB연동 상수
+    // * DB연동 상수
     private String db_url = "jdbc:mysql://localhost:3306/waitingDB";
     private String db_user = "root";
     private String db_password = "1234";
     private Connection conn; // DB 연동결과를 조작하는 인터페이스(java.sql)
     
-    // 2. DB 연동 메소드
+    // * DB 연동 메소드
     public void connectDB(){
         try {
             Class.forName("com.mysql.cj.jdbc.Driver"); // 드라이버

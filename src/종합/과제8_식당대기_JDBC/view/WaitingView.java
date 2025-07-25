@@ -8,17 +8,17 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class WaitingView {
-    // 0. 싱글톤 생성
+    // * 싱글톤 생성
     private WaitingView(){}
     private static final WaitingView instance = new WaitingView();
     public static WaitingView getInstance(){ return instance; }
 
-    // 0. 싱글톤 호출( controller )
+    // * 싱글톤 호출( controller )
     private WaitingController wc = WaitingController.getInstance();
 
     Scanner scan = new Scanner(System.in);
 
-    // 0. 공통화면
+    // * 공통화면
     public void index(){
         try {
             for(;;){
@@ -72,7 +72,6 @@ public class WaitingView {
     }// func end
 
 
-    // (3) 특정 대기취소(삭제)
     // (3) 특정 대기취소(삭제)
     public void waitingCancle(){
         System.out.println("---- 특정 대기취소 ----");
